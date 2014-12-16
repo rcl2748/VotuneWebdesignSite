@@ -18,7 +18,6 @@ public class Login extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			if ()
 			Statement statement = Data.SQL_CONNECTION.createStatement();
 			ResultSet set = statement.executeQuery("SELECT * FROM users WHERE");
 		} catch (SQLException e) {
