@@ -18,8 +18,14 @@ public class Login extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			Statement statement = Data.SQL_CONNECTION.createStatement();
-			ResultSet set = statement.executeQuery("SELECT * FROM users WHERE");
+			String username = request.getParameter("user");
+			String password = request.getParameter("pass");
+			if (username.matches(Data.USERNAME_REGEX) && password.matches(Data.USERNAME_REGEX)) {
+				Statement statement = Data.SQL_CONNECTION.createStatement();
+				ResultSet set = statement.executeQuery(String.format("SELECT * FROM users WHERE username='%s'", username));
+				set.getString("");
+				
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
