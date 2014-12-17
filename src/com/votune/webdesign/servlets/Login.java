@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.votune.webdesign.util.Data;
 
 @WebServlet("/login")
-public class Login extends HttpServlet {
+public strictfp class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@Override
