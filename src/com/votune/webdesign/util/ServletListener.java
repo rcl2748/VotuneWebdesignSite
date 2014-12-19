@@ -15,10 +15,15 @@ public class ServletListener implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
 		try {
-			Class.forName("org.mysql.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			Data.SQL_CONNECTION = DriverManager.getConnection(Data.SQL_URL, Data.SQL_USER, Data.SQL_PASSWORD);
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
+		Data.PAGES.put("nav_home", "home.jsp");
+//		Data.PAGES.put("nav_gallery", "gallery.jsp");
+//		Data.PAGES.put("nav_order", "order.jsp");
+		Data.PAGES.put("error", "error.jsp");
+		
 	}
 }

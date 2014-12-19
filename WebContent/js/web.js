@@ -1,6 +1,6 @@
 //init
-currentPage = document.getElementById("navhome");
-pageUpdate = "";
+currentPage = document.getElementById("nav_home");
+pageUpdate = "switchpage";
 login = "";
 register = "";
 
@@ -18,7 +18,7 @@ function switchPage(page) {
 	
 	// ajax
 	$.post(pageUpdate, {
-		page : page
+		page : page.id
 	}, function(data) {
 		recievedPage = data;
 	});
