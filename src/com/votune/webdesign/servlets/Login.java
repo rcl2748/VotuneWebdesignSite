@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.votune.webdesign.beans.User;
 import com.votune.webdesign.util.Data;
 
 @WebServlet("/login")
@@ -23,7 +24,8 @@ public strictfp class Login extends HttpServlet {
 			if (username.matches(Data.USERNAME_REGEX) && password.matches(Data.USERNAME_REGEX)) {
 				Statement statement = Data.SQL_CONNECTION.createStatement();
 				ResultSet set = statement.executeQuery(String.format("SELECT * FROM users WHERE username='%s'", username));
-				set.getString("");
+				User user = new User();
+//				.getString("");
 				
 			}
 		} catch (SQLException e) {

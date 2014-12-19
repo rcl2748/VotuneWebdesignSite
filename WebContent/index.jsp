@@ -1,4 +1,4 @@
-<%@page language="java" pageEncoding="ISO-8859-1" %>
+<%@page language="java" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -6,14 +6,7 @@
 <title>Web Tech</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<script language="javascript" type="text/javascript">
-	function clearText(field) {
-		if (field.defaultValue == field.value)
-			field.value = '';
-		else if (field.value == '')
-			field.value = field.defaultValue;
-	}
-</script>
+<script type="text/javascript" src="js/jquery.js" ></script>
 </head>
 
 <body>
@@ -38,12 +31,12 @@
 	<div id="menu_wrapper">
 		<div id="menu">
 			<ul>
-				<li><a class="current" href="#"><span></span>Home</a></li>
-				<li><a href="#"><span></span>Web 2.0</a></li>
-				<li><a href="#"><span></span>CSS Templates</a></li>
-				<li><a href="#"><span></span>Graphics</a></li>
-				<li><a href="#"><span></span>Inspirations</a></li>
-				<li><a href="#"><span></span>Flash Files</a></li>
+				<li><a id="navhome" class="current" onclick="switchPage(this)" href="#"><span></span>Home</a></li>
+				<li><a id="nav1" onclick="switchPage(this)" href="#"><span></span>Web 2.0</a></li>
+				<li><a id="nav2" onclick="switchPage(this)" href="#"><span></span>CSS Templates</a></li>
+				<li><a id="nav3" onclick="switchPage(this)" href="#"><span></span>Graphics</a></li>
+				<li><a id="nav4" onclick="switchPage(this)" href="#"><span></span>Inspirations</a></li>
+				<li><a id="nav5" onclick="switchPage(this)" href="#"><span></span>Flash Files</a></li>
 			</ul>
 		</div>
 	</div>
@@ -223,9 +216,10 @@
 			<li><a href="#">Inspirations</a></li>
 			<li><a href="#">Freebies</a></li>
 		</ul>
-		Copyright &copy; 2048 <a href="#">Your Company Name</a> | Designed by <a href="http://www.templatemo.com/" rel="nofollow" target="_blank">templatemo</a>
+		Copyright &copy; 2015 <a href="#">Votune Graphics</a> | Website Developed by <a href="#" rel="nofollow" target="_blank">Victor</a>
 	</div>
 
+	<script src="js/web.js"></script>
 </body>
 
 </html>
