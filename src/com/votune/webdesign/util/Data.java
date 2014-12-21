@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Data {
-	public static final String USERNAME_REGEX = "$[\\d\\w.-]+^";
+	public static final String USERNAME_REGEX = "[\\d\\w.-]+";
 	
-	public static final String SQL_URL = "";
-	public static final String SQL_USER = "";
+	public static final String SQL_URL = "jdbc:mysql://localhost:3306/test";
+	public static final String SQL_USER = "root";
 	public static final String SQL_PASSWORD = "";
 	public static Connection SQL_CONNECTION;
 	public static final Map<String, String> PAGES = new HashMap<String, String>();

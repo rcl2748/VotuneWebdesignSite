@@ -18,7 +18,7 @@
 		<div id="header_right">
 			<a href="javascript:void(0)"><img alt="" src="images/twitter.png" /></a><a href="javascript:void(0)"><img alt="" src="images/rss.png" /></a>
 			<div id="login_box">
-				<form action="#" method="get">
+				<form action="login" method="post">
 					<input id="user" class="login_field" name="user" onblur="clearText(this)" onfocus="clearText(this)" type="text" value="Username" />
 					<button id="submit" name="submit" style="font-weight: bold;" type="submit">Login</button>
 					<input id="pass" class="login_field" name="pass" onblur="clearText(this)" onfocus="clearText(this)" type="password" value="Password" />
@@ -216,6 +216,9 @@
 		Copyright &copy; 2015 <a href="javascript:void(0)">Votune Graphics</a> | Website Developed by <a href="javascript:void(0)" rel="nofollow" target="_blank">Victor</a>
 	</div>
 	<script src="js/web.js"></script>
+	<div>
+		
+	</div>
 </body>
 
 </html>
