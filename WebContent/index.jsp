@@ -31,9 +31,9 @@
 	<div id="menu_wrapper">
 		<div id="menu">
 			<ul>
-				<li><a id="nav_home" class="current" onclick="switchPage(this)" href="javascript:void(0)"><span></span>Home</a></li>
-				<li><a id="nav_gallery" onclick="switchPage(this)" href="javascript:void(0)"><span></span>Web 2.0</a></li>
-				<li><a id="nav_order" onclick="switchPage(this)" href="javascript:void(0)"><span></span>CSS Templates</a></li>
+				<li><a class="current" onclick="switchPage(this)" href="javascript:void(0)"><span></span>Home</a></li>
+				<li><a onclick="switchPage(this)" href="javascript:void(0)"><span></span>Web 2.0</a></li>
+				<li><a onclick="switchPage(this)" href="javascript:void(0)"><span></span>CSS Templates</a></li>
 			</ul>
 		</div>
 	</div>

@@ -1,33 +1,30 @@
 package com.votune.webdesign.beans;
 
+import com.votune.webdesign.util.Pages;
+import com.votune.webdesign.util.Permission;
+
 public class Page {
-	private String name;
-	private String url;
 	private String title;
-	private String tab;
+	private String contextUrl;
+	private Permission permission;
 	
-	public Page(String name, String url, String title, String tab) {
-		super();
-		this.name = name;
-		this.url = url;
+	public Page(String title, String contextUrl, Permission permission) {
 		this.title = title;
-		this.tab = tab;
-	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public String getUrl() {
-		return url;
+		this.contextUrl = contextUrl;
+		this.permission = permission;
+		
 	}
 	
 	public String getTitle() {
 		return title;
 	}
 	
-	public String getTab() {
-		return tab;
+	public String getContextUrl() {
+		return Pages.PAGE_PREFIX + contextUrl;
+		
 	}
 	
+	public Permission getPermission() {
+		return permission;
+	}
 }

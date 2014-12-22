@@ -4,6 +4,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import com.votune.webdesign.beans.NavPanelLink;
+import com.votune.webdesign.beans.Page;
 
 public class ServletListener implements ServletContextListener {
 	
@@ -20,10 +22,13 @@ public class ServletListener implements ServletContextListener {
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
-		Data.PAGES.put("nav_home", "home.jsp");
-//		Data.PAGES.put("nav_gallery", "gallery.jsp");
-//		Data.PAGES.put("nav_order", "order.jsp");
-		Data.PAGES.put("error", "error.jsp");
-		
+		Pages.PAGES.put(Pages.HOME_PAGE_URL, new Page("Cheapest custom Web Design store - Votune", "home.jsp", Permission.GUEST));
+		Pages.PAGES.put(Pages.GALLERY_PAGE_URL, new Page("Web design gallery - Votune", "gallery.jsp", Permission.GUEST));
+		Pages.PAGES.put(Pages.ORDER_PAGE_URL, new Page("Order a custom web design - Votune", "order.jsp", Permission.GUEST));
+
+		Pages.NAVPANEL.add(new NavPanelLink(Pages.HOME_PAGE_URL, "Home", Permission.GUEST));
+		Pages.NAVPANEL.add(new NavPanelLink(Pages.GALLERY_PAGE_URL, "Gallery", Permission.GUEST));
+		Pages.NAVPANEL.add(new NavPanelLink(Pages.ORDER_PAGE_URL, "Order", Permission.GUEST));
+		Pages.NAVPANEL.add(new NavPanelLink(Pages.REQUESTS_PAGE_URL, "Requests", Permission.DEV));
 	}
 }

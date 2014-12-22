@@ -1,23 +1,25 @@
 package com.votune.webdesign.beans;
 
-import com.votune.webdesign.util.UserClass;
+import java.util.ArrayList;
+import java.util.List;
+import com.votune.webdesign.util.Permission;
 
 public class User {
 	
 	private String name;
 	private String password;
 	private String email;
-	private UserClass userClass;
+	private List<Permission> permissions = new ArrayList<Permission>();
 	
 	public User() {
 		
 	}
 	
-	public User(String name, String password, String email, UserClass userClass) {
+	public User(String name, String password, String email, List<Permission> permissions) {
 		this.name = name;
 		this.password = password;
 		this.email = email;
-		this.userClass = userClass;
+		this.permissions = permissions;
 	}
 	
 	public String getName() {
@@ -44,12 +46,11 @@ public class User {
 		this.email = email;
 	}
 	
-	public UserClass getUserClass() {
-		return userClass;
+	public List<Permission> getPermissions() {
+		return permissions;
 	}
 	
-	public void setUserClass(UserClass userClass) {
-		this.userClass = userClass;
+	public void addPermission(Permission permission) {
+		this.permissions.add(permission);
 	}
-	
 }
